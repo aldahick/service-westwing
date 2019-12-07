@@ -17,6 +17,6 @@ describe("GET /v1/seasons", () => {
       url.resolve(serviceUrl, "/v1/episodes/1/transcript")
     );
     const generatedHash = crypto.createHash("sha512").update(data.transcript).digest("hex");
-      assert.strictEqual(generatedHash, knownHash, "transcript hashes don't match");
+    assert.strictEqual(generatedHash, S1E1_TRANSCRIPT_HASH, "transcript hashes don't match");
   });
 });
