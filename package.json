@@ -1,0 +1,43 @@
+{
+  "name": "service-westwing",
+  "version": "0.1.0",
+  "description": "Scraper for West Wing transcripts",
+  "author": "Alex Hicks <alex@alexhicks.net> (https://alexhicks.net)",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index",
+    "start:dev": "tsc-watch --onSuccess \"npm run start\"",
+    "build": "tsc -p .",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha dist/**/*.spec.js",
+    "test:dev": "tsc-watch --onSuccess \"npm run test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aldahick/service-westwing"
+  },
+  "dependencies": {
+    "@aldahick/service-utils": "0.1.15",
+    "@hapi/joi": "16.1.8",
+    "axios": "0.19.0",
+    "body-parser": "1.19.0",
+    "cheerio": "1.0.0-rc.3",
+    "express": "4.17.1",
+    "moment": "2.24.0",
+    "source-map-support": "0.5.16"
+  },
+  "devDependencies": {
+    "@aldahick/eslint-rules": "0.1.2",
+    "@types/body-parser": "1.17.1",
+    "@types/cheerio": "0.22.15",
+    "@types/express": "4.17.2",
+    "@types/hapi__joi": "16.0.4",
+    "@types/mocha": "5.2.7",
+    "@types/source-map-support": "0.5.0",
+    "mocha": "6.2.2",
+    "tsc-watch": "4.0.0",
+    "typescript": "3.7.2"
+  }
+}
