@@ -23,10 +23,10 @@ export class GetEpisodesController extends Controller {
       episodes: $("table.boldtable tr").toArray().slice(1).map(row => {
         const cells = $(row).children("td").toArray().map(e => $(e));
         return {
-          id: Number(cells[4].text().split("-")[1]),
+          id: Number(cells[0].text()),
           title: cells[1].text(),
           airedAt: moment(cells[3].text(), "D MMM YY").toDate(),
-          externalId: Number(cells[0].text())
+          number: Number(cells[4].text().split("-")[1]),
         };
       })
     };
